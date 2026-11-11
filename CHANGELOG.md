@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 — 2026-11-11
+
+- Descrição aponta para website-builder quando o objetivo é criar um site de raiz / Description points to website-builder for building a site from scratch.
+
 ## 1.0.0 — 2026-11-10
 
 - Primeira versão pública / First public release.
