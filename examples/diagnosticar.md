@@ -1,4 +1,4 @@
-# Exemplo de utilização — website-doctor
+# Exemplo de utilização — website-studio, modo Diagnosticar
 
 > Exemplo ilustrativo, com um site fictício. Os relatórios reais dependem do que for encontrado — cada problema vem com a prova (linha de código, cabeçalho, captura, medição).
 

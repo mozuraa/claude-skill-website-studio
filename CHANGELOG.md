@@ -1,12 +1,20 @@
 # Changelog
 
-## 1.0.1 — 2026-11-11
+## 2.0.0 — 2026-11-11 · website-studio
 
-- Descrição aponta para website-builder quando o objetivo é criar um site de raiz / Description points to website-builder for building a site from scratch.
+- Junta **website-builder** 1.0.0 e **website-doctor** 1.0.1 numa só skill, com os dois históricos de git preservados / Merges website-builder 1.0.0 and website-doctor 1.0.1 into one skill, keeping both git histories.
+- Três modos: 💡 Idear (novo), 🛠️ Criar, 🩺 Diagnosticar / Three modes: Ideate (new), Create, Diagnose.
+- Novo guia `references/idear/inspiracao.md`; guias reorganizados em `references/criar/` e `references/diagnostico/` / New inspiration guide; guides reorganized by mode.
+- Novo ícone doodle e novo exemplo do modo Idear / New doodle icon and Ideate example.
 
-## 1.0.0 — 2026-11-10
+## 1.0.1 — 2026-11-11 · website-doctor
 
-- Primeira versão pública / First public release.
-- 12 áreas de exame, checklist completo e guia de comandos / 12 exam areas, full checklist and command guide.
-- Consulta, relatório de saúde com opinião, decisão conjunta e tratamento verificado / Consultation, health report with opinion, joint decision and verified treatment.
-- Ícone doodle 2D / 2D doodle icon.
+- Descrição aponta para website-builder quando o objetivo é criar um site de raiz.
+
+## 1.0.0 — 2026-11-10 · website-doctor
+
+- Primeira versão pública: 12 áreas de exame, checklist e guia de comandos, relatório de saúde com opinião.
+
+## 1.0.0 — 2026-11-11 · website-builder
+
+- Primeira versão pública: 7 fases com 3 aprovações, 6 guias e site-base testado.

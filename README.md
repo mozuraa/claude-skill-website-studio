@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="icon.svg" width="160" alt="Website doctor — janela de browser com batimento cardíaco e estetoscópio">
+  <img src="icon.svg" width="160" alt="Website studio — janela de browser com uma página a ser desenhada, uma lâmpada e um estetoscópio">
 </p>
 
-<h1 align="center">Website doctor — Claude Skill</h1>
+<h1 align="center">Website studio — Claude Skill</h1>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Claude-Skill-D97757" alt="Claude Skill">
+  <img src="https://img.shields.io/badge/modos-Idear%20·%20Criar%20·%20Diagnosticar-8A63D2" alt="Modos">
 </p>
 
 <p align="center">
@@ -19,182 +20,129 @@
 
 ## Português
 
-Uma [skill](#o-que-é-uma-skill) para o **Claude** que funciona como **médico do teu site**: examina tudo o que afeta o bom funcionamento, mostra-te um relatório de saúde por prioridades, dá-te a opinião sincera sobre o que fazer primeiro e corrige — só o que autorizares.
+Um **estúdio completo de websites** para o **Claude**, com três modos que se encadeiam:
 
-### O que examina (12 áreas)
+| Modo | Para quê | Exemplo de pedido |
+|---|---|---|
+| 💡 **Idear** | Ideias detalhadas para um **site novo** ou para **melhorar o teu site** (mais contactos, vendas, visitas do Google) | "O meu site quase não traz clientes, ideias?" |
+| 🛠️ **Criar** | **Constrói um site completo de raiz contigo**, do briefing à publicação, com um site-base pronto | "Quero um site para o meu restaurante" |
+| 🩺 **Diagnosticar** | **Examina e corrige** tudo o que afeta o site: 12 áreas, 150+ verificações, relatório de saúde com opinião | "O meu site é seguro? Está lento no telemóvel" |
 
-| Área | Exemplos |
-|---|---|
-| 🧩 **Funcionamento** | erros na consola, links partidos, 404, formulários que não enviam, redirecionamentos |
-| 📐 **Layout e alinhamentos** | telemóvel/tablet/desktop, scroll horizontal, elementos sobrepostos, espaçamentos, modo escuro, `100vh` no iPhone |
-| 🖼️ **Imagens e media** | peso, WebP/AVIF, tamanho certo, `alt`, deformações, favicon e imagem de partilha, GPS nas fotos |
-| ⚡ **Desempenho** | Core Web Vitals (LCP, INP, CLS), JS e fontes pesados, cache, compressão, scripts de terceiros |
-| 🔒 **Segurança** | HTTPS, HSTS, CSP e outros cabeçalhos, chaves secretas expostas, `.env`/`.git` públicos, XSS, injeção SQL, cookies, dependências vulneráveis, regras Firebase/Supabase |
-| 🍪 **Privacidade e RGPD** | rastreadores antes do consentimento, banner de cookies, política de privacidade, Google Fonts, YouTube, dados pessoais em URLs |
-| ♿ **Acessibilidade** | WCAG 2.2 AA: contraste, teclado, foco, etiquetas, cabeçalhos, alvos de toque, zoom |
-| 🔎 **SEO e partilha** | títulos, descrições, canonical, sitemap, robots, dados estruturados, Open Graph |
-| ✍️ **Conteúdo** | gralhas, *Lorem ipsum* esquecido, contactos e ano desatualizados |
-| 🌐 **Compatibilidade** | Safari/iOS, Chrome, Firefox, Android, ligações lentas |
-| 📮 **Domínio, alojamento e email** | SSL a expirar, DNS, SPF/DKIM/DMARC, cópias de segurança, monitorização |
-| 🧹 **Qualidade do código** | avisos de build, linter, `console.log`, dependências desatualizadas, tratamento de erros |
+Em todos os modos o Claude **faz perguntas, mostra provas, dá a sua opinião honesta e só avança com a tua autorização**. A ideia aprovada no Idear passa ao Criar; o Criar termina com um exame do Diagnosticar; um diagnóstico pode levar a novas ideias.
 
-A lista completa (mais de 150 verificações) está em [`references/checklist.md`](references/checklist.md) e os comandos para cada uma em [`references/como-verificar.md`](references/como-verificar.md).
+### 💡 Idear
 
-### Como trabalha
+- Duas a três ideias **bem desenvolvidas**, cada uma com: o que é, o objetivo, como fica no site, tecnologia e custo, esforço, primeiros passos, riscos e como medir.
+- Antes de propor melhorias, **vê o teu site** para não sugerir o que já existe.
+- Usa um [catálogo de inspiração](references/idear/inspiracao.md) por objetivo e por tipo de site, e diz-te francamente que ideias evitar (carrosséis, chats sem ninguém, blogs abandonados...).
 
-1. **🩺 Consulta:** faz-te algumas perguntas, como o que examinar (URL, código ou os dois), se é um exame completo ou um problema concreto, para que serve o site e se pode corrigir.
-2. **🔬 Exame:** verifica com provas. Abre o site em telemóvel e desktop, lê a consola e a rede, mede a velocidade, lê os cabeçalhos e o código. Sem prova, não aponta problemas.
-3. **📋 Relatório de saúde:** mostra uma tabela por área (🟢🟡🟠🔴) e os problemas por gravidade. Para cada um diz o que é, onde está, porque importa, como corrigir e o esforço.
-4. **💬 Opinião e perguntas:** diz-te francamente o que faria primeiro e o que não vale o esforço, e pergunta-te o que só tu podes decidir. Se sugerires algo, diz-te honestamente se concorda e porquê.
-5. **🛠️ Tratamento:** corrige uma coisa de cada vez, verifica cada correção (com capturas antes e depois no layout) e pede confirmação antes de tudo o que é arriscado.
-6. **✅ Alta:** resume o que ficou resolvido, o que falta e o que tens de fazer tu.
+### 🛠️ Criar
 
-### Exemplos de pedidos
+```
+1. Briefing ─► 2. Plano ─► ✋ ─► 3. Identidade visual ─► 4. Página inicial ─► ✋ ─► 5. Resto do site ─► 6. Verificação ─► ✋ ─► 7. Lançamento
+```
 
-- "Revê o meu site, https://…"
-- "O menu fica desalinhado no telemóvel"
-- "O meu site é seguro? Cumpre o RGPD?"
-- "Porque é que o site está tão lento?"
-- "Melhora tudo o que conseguires no meu site"
+- **Briefing** com as perguntas certas para 11 tipos de site.
+- **Plano** com a tecnologia, o alojamento e os custos, mais a sua opinião. ✋ Aprovas.
+- **Identidade visual** própria, não um modelo genérico.
+- **Página inicial** primeiro, com capturas em telemóvel e computador. ✋ Aprovas.
+- **Resto do site**: páginas, 404, páginas legais e SEO.
+- **Verificação**: Lighthouse ≥ 90, acessibilidade, privacidade. ✋ Aprovas.
+- **Lançamento**: domínio, email, Search Console e um guia `COMO-EDITAR.md`.
+- **Guias:** [`briefing`](references/criar/briefing.md) · [`stack`](references/criar/stack.md) (tecnologia, alojamento, formulários, CMS, estatísticas sem cookies, custos) · [`design`](references/criar/design.md) · [`paginas`](references/criar/paginas.md) (conteúdo e páginas legais UE/Portugal) · [`qualidade`](references/criar/qualidade.md) · [`lancamento`](references/criar/lancamento.md).
+- **[Site-base](assets/starter/)** testado em telemóvel, computador e modo escuro. Tem HTML acessível, CSS com *design tokens*, SEO e partilha, cabeçalhos de segurança, zero rastreadores, 404, política de privacidade e cerca de 1 KB de JavaScript.
 
-Vê um exemplo completo de relatório em [`examples/exemplo.md`](examples/exemplo.md).
+### 🩺 Diagnosticar
+
+**Consulta → exame com provas → relatório de saúde (🔴🟠🟡🟢) → a minha opinião → decides → tratamento verificado → alta.**
+
+O exame cobre 12 áreas: funcionamento · layout e alinhamentos · imagens · desempenho (Core Web Vitals) · segurança (HTTPS, CSP, segredos expostos, XSS...) · privacidade e RGPD · acessibilidade (WCAG 2.2 AA) · SEO · conteúdo · compatibilidade · domínio, alojamento e email · qualidade do código.
+
+Guias: [`checklist`](references/diagnostico/checklist.md) (150+ verificações) e [`como-verificar`](references/diagnostico/como-verificar.md) (comandos e ferramentas para cada uma).
 
 ### Segurança e ética
 
-A skill só examina sites que são teus ou que estás autorizado a testar, e todas as verificações são passivas: lê código, cabeçalhos e o que o site mostra publicamente. Nunca ataca nem explora falhas. Quando encontra um segredo exposto, não o repete e diz-te como o revogar.
+Só examina sites teus, e as verificações de segurança são sempre passivas: nunca ataca nem explora falhas. Nunca copia sites alheios e nunca inventa preços, testemunhos ou números. Também não cria contas nem faz compras por ti: diz-te exatamente o que fazer.
 
-### Funciona com
+### Exemplos
 
-HTML/CSS/JS, React, Next.js, Vue, Nuxt, Svelte, Astro, Vite, WordPress, PHP, sites estáticos (GitHub Pages, Netlify, Vercel), Firebase e Supabase. Em plataformas fechadas (Shopify, Wix, Squarespace) foca-se em conteúdo, imagens, velocidade, SEO, acessibilidade e cookies.
-
-Funciona melhor no **Claude Code** com acesso ao código e a um browser, mas também funciona só com um URL.
+- [Idear: ideias para uma oficina de bicicletas](examples/idear.md)
+- [Criar: briefing e plano de um estúdio de pilates](examples/criar.md)
+- [Diagnosticar: relatório de saúde de uma padaria](examples/diagnosticar.md)
 
 ### Instalação
 
-**Claude Code (para todos os teus projetos)**
+**Claude Code**
 
 ```bash
-git clone https://github.com/mozuraa/claude-skill-website-doctor.git ~/.claude/skills/website-doctor
+git clone https://github.com/mozuraa/claude-skill-website-studio.git ~/.claude/skills/website-studio
 ```
 
-**Claude Code (só num projeto)** — dentro da pasta do projeto:
+**Ou com toda a biblioteca, como plugin:**
 
-```bash
-git clone https://github.com/mozuraa/claude-skill-website-doctor.git .claude/skills/website-doctor
 ```
-
-**Ou com toda a biblioteca, como plugin:** ver [mozuraa/claude-skills](https://github.com/mozuraa/claude-skills).
+/plugin marketplace add mozuraa/claude-skills
+/plugin install estudios@mozuraa-skills
+```
 
 **App Claude / claude.ai:** carrega em **Code → Download ZIP** e carrega o ZIP nas **Definições**, na secção **Skills** (em *Capacidades*).
 
-Abre uma sessão nova para a skill ser carregada. Para atualizar: `cd ~/.claude/skills/website-doctor && git pull`.
-
-### O que é uma skill?
-
-Uma skill é uma pasta com um ficheiro `SKILL.md`: um nome, uma descrição de quando deve ser usada e instruções. O Claude lê só a descrição até ela ser útil; quando o pedido encaixa, carrega as instruções e segue-as.
+Abre uma sessão nova para a skill ser carregada. Para atualizar: `cd ~/.claude/skills/website-studio && git pull`.
 
 ### Estrutura
 
 ```
-claude-skill-website-doctor/
-├── SKILL.md                   # a skill: consulta → exame → relatório → decisão → tratamento → alta
+claude-skill-website-studio/
+├── SKILL.md                     # os 3 modos e as regras comuns
 ├── references/
-│   ├── checklist.md           # 12 áreas, 150+ verificações
-│   └── como-verificar.md      # comandos e ferramentas para cada verificação
-├── examples/
-│   └── exemplo.md             # exemplo de consulta e relatório
-├── icon.svg
-├── README.md
-├── CHANGELOG.md
-└── LICENSE
+│   ├── idear/inspiracao.md      # ideias por objetivo e por tipo de site
+│   ├── criar/                   # briefing, stack, design, paginas, qualidade, lancamento
+│   └── diagnostico/             # checklist (12 áreas) e como-verificar (comandos)
+├── assets/starter/              # site-base pronto a adaptar
+├── examples/                    # idear.md, criar.md, diagnosticar.md
+├── icon.svg · README.md · CHANGELOG.md · LICENSE
 ```
 
-### Contribuir
+### História
 
-Falta alguma verificação? Algum comando deixou de funcionar? Abre uma *issue* ou um *pull request*.
+A versão 2.0 junta duas skills anteriores, **website-builder** e **website-doctor**, cujos históricos de git estão preservados neste repositório, e acrescenta o modo Idear.
 
 ### Licença
 
-[MIT](LICENSE)
+[MIT](LICENSE). Os modelos de páginas legais são pontos de partida e não substituem aconselhamento jurídico.
 
 ---
 
 ## English
 
-A [skill](#what-is-a-skill) for **Claude** that acts as your **website's doctor**. It examines everything that affects how well the site works, shows a health report by priority, gives its honest opinion on what to do first, and fixes things, but only what you approve.
+A **complete website studio** for **Claude**, with three linked modes:
 
-### What it examines (12 areas)
+| Mode | What for | Example prompt |
+|---|---|---|
+| 💡 **Idear** (Ideate) | Detailed ideas for a **new site** or to **improve your site** (more leads, sales, Google traffic) | "My site barely brings in customers, any ideas?" |
+| 🛠️ **Criar** (Create) | **Builds a complete website from scratch with you**, from briefing to launch, with a ready starter site | "I want a website for my restaurant" |
+| 🩺 **Diagnosticar** (Diagnose) | **Examines and fixes** everything that affects a site: 12 areas, 150+ checks, a health report with its opinion | "Is my site secure? It's slow on mobile" |
 
-| Area | Examples |
-|---|---|
-| 🧩 **Functionality** | console errors, broken links, 404s, forms that don't send, redirects |
-| 📐 **Layout & alignment** | mobile/tablet/desktop, horizontal scroll, overlapping elements, spacing, dark mode, `100vh` on iPhone |
-| 🖼️ **Images & media** | weight, WebP/AVIF, right size, `alt`, distortion, favicon and share image, GPS in photos |
-| ⚡ **Performance** | Core Web Vitals (LCP, INP, CLS), heavy JS and fonts, caching, compression, third-party scripts |
-| 🔒 **Security** | HTTPS, HSTS, CSP and other headers, exposed secret keys, public `.env`/`.git`, XSS, SQL injection, cookies, vulnerable dependencies, Firebase/Supabase rules |
-| 🍪 **Privacy & GDPR** | trackers before consent, cookie banner, privacy policy, Google Fonts, YouTube, personal data in URLs |
-| ♿ **Accessibility** | WCAG 2.2 AA: contrast, keyboard, focus, labels, headings, touch targets, zoom |
-| 🔎 **SEO & sharing** | titles, descriptions, canonical, sitemap, robots, structured data, Open Graph |
-| ✍️ **Content** | typos, leftover *Lorem ipsum*, outdated contacts and year |
-| 🌐 **Compatibility** | Safari/iOS, Chrome, Firefox, Android, slow connections |
-| 📮 **Domain, hosting & email** | expiring SSL, DNS, SPF/DKIM/DMARC, backups, monitoring |
-| 🧹 **Code quality** | build warnings, linter, `console.log`, outdated dependencies, error handling |
+In every mode Claude **asks questions, shows evidence, gives its honest opinion and only proceeds with your approval**. An approved idea flows into Create; Create ends with a Diagnose checkup; a diagnosis can lead to new ideas.
 
-The full list (150+ checks) is in [`references/checklist.md`](references/checklist.md) and the commands for each one in [`references/como-verificar.md`](references/como-verificar.md) (in Portuguese; Claude translates as needed).
+- **Ideate:** 2–3 well-developed ideas, each with its goal, where it fits on the site, cost, effort, first steps, risks and how to measure it. It looks at your site first, and draws on an inspiration catalog.
+- **Create:** 7 phases with 3 approvals. Guides for briefing (11 site types), technology and costs, design, page content and EU/Portugal legal pages, quality and launch, plus a tested starter site (accessible, fast, secure, no trackers).
+- **Diagnose:** consultation → evidence-based exam → health report (🔴🟠🟡🟢) → opinion → you decide → verified fixes → discharge. It covers functionality, layout, images, performance, security, privacy/GDPR, accessibility, SEO, content, compatibility, domain/email and code.
 
-### How it works
-
-1. **🩺 Consultation:** asks you a few questions, such as what to examine (URL, code or both), whether you want a full checkup or have a specific problem, what the site is for, and whether it may fix things.
-2. **🔬 Examination:** checks with evidence. It opens the site on mobile and desktop, reads the console and network, measures speed, and reads the headers and code. Without evidence, it doesn't report a problem.
-3. **📋 Health report:** shows a table by area (🟢🟡🟠🔴) and the issues by severity. For each one it says what it is, where it is, why it matters, how to fix it and how much effort it takes.
-4. **💬 Opinion & questions:** tells you frankly what it would do first and what isn't worth the effort, and asks you about the decisions only you can make. If you suggest something, it tells you honestly whether it agrees and why.
-5. **🛠️ Treatment:** fixes one thing at a time, verifies each fix (with before/after screenshots for layout), and asks before anything risky.
-6. **✅ Discharge:** summarizes what was fixed, what's left and what you need to do yourself.
-
-### Example prompts
-
-- "Review my site, https://…"
-- "The menu is misaligned on mobile"
-- "Is my site secure? Is it GDPR compliant?"
-- "Why is my site so slow?"
-- "Improve everything you can on my site"
-
-See a full example report in [`examples/exemplo.md`](examples/exemplo.md) (in Portuguese).
-
-### Safety & ethics
-
-The skill only examines sites you own or are authorized to test, and every check is passive: it reads code, headers and what the site shows publicly. It never attacks or exploits anything. When it finds an exposed secret, it doesn't repeat it and tells you how to revoke it.
-
-### Works with
-
-HTML/CSS/JS, React, Next.js, Vue, Nuxt, Svelte, Astro, Vite, WordPress, PHP, static sites (GitHub Pages, Netlify, Vercel), Firebase and Supabase. On closed platforms (Shopify, Wix, Squarespace) it focuses on content, images, speed, SEO, accessibility and cookies.
-
-It works best in **Claude Code** with access to the code and a browser, but also works with just a URL.
+The guides are in Portuguese, but Claude replies in the language you write in. Security checks are passive and only on your own sites.
 
 ### Installation
 
-**Claude Code (all projects)**
-
 ```bash
-git clone https://github.com/mozuraa/claude-skill-website-doctor.git ~/.claude/skills/website-doctor
+git clone https://github.com/mozuraa/claude-skill-website-studio.git ~/.claude/skills/website-studio
 ```
 
-**Claude Code (one project only)**, from the project folder:
+Or with the whole library as a plugin: `/plugin marketplace add mozuraa/claude-skills` then `/plugin install estudios@mozuraa-skills`. For the Claude app / claude.ai, use **Code → Download ZIP** and upload it under **Settings → Skills**.
 
-```bash
-git clone https://github.com/mozuraa/claude-skill-website-doctor.git .claude/skills/website-doctor
-```
+### History
 
-**Or with the whole library, as a plugin:** see [mozuraa/claude-skills](https://github.com/mozuraa/claude-skills).
-
-**Claude app / claude.ai:** click **Code → Download ZIP** and upload the ZIP in **Settings**, under **Skills** (in *Capabilities*).
-
-Start a new session so the skill is loaded. To update: `cd ~/.claude/skills/website-doctor && git pull`.
-
-### What is a skill?
-
-A skill is a folder with a `SKILL.md` file: a name, a description of when it should be used, and instructions. Claude only reads the description until it becomes relevant; when a request matches, it loads the instructions and follows them.
+Version 2.0 merges two earlier skills, **website-builder** and **website-doctor** (both git histories are preserved here), and adds the Ideate mode.
 
 ### License
 
-[MIT](LICENSE)
+[MIT](LICENSE). The legal page templates are starting points, not legal advice.
