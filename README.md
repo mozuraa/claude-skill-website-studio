@@ -14,63 +14,61 @@
 📚 Faz parte da <b><a href="https://github.com/mozuraa/claude-skills">biblioteca de skills de mozuraa</a></b> · Part of <b><a href="https://github.com/mozuraa/claude-skills">mozuraa's skills library</a></b>
 </p>
 
-<p align="center"><b><a href="#português">Português</a> · <a href="#english">English</a></b></p>
+<p align="center"><b>🇬🇧 English · <a href="README.pt.md">🇵🇹 Português</a></b></p>
 
 ---
 
-## Português
+A **complete website studio** for **Claude**, with three linked modes:
 
-Um **estúdio completo de websites** para o **Claude**, com três modos que se encadeiam:
-
-| Modo | Para quê | Exemplo de pedido |
+| Mode | What for | Example request |
 |---|---|---|
-| 💡 **Idear** | Ideias detalhadas para um **site novo** ou para **melhorar o teu site** (mais contactos, vendas, visitas do Google) | "O meu site quase não traz clientes, ideias?" |
-| 🛠️ **Criar** | **Constrói um site completo de raiz contigo**, do briefing à publicação, com um site-base pronto | "Quero um site para o meu restaurante" |
-| 🩺 **Diagnosticar** | **Examina e corrige** tudo o que afeta o site: 12 áreas, 150+ verificações, relatório de saúde com opinião | "O meu site é seguro? Está lento no telemóvel" |
+| 💡 **Ideate** | Detailed ideas for a **new site** or to **improve your site** (more contacts, sales, Google visits) | "My site barely brings in customers, any ideas?" |
+| 🛠️ **Create** | **Builds a complete site from scratch with you**, from the brief to launch, with a ready-made starter site | "I want a website for my restaurant" |
+| 🩺 **Diagnose** | **Examines and fixes** everything that affects the site: 12 areas, 150+ checks, a health report with an opinion | "Is my site secure? It's slow on mobile" |
 
-Em todos os modos o Claude **faz perguntas, mostra provas, dá a sua opinião honesta e só avança com a tua autorização**. A ideia aprovada no Idear passa ao Criar; o Criar termina com um exame do Diagnosticar; um diagnóstico pode levar a novas ideias.
+In every mode Claude **asks questions, shows evidence, gives its honest opinion and only goes ahead with your approval**. The idea approved in Ideate moves on to Create; Create ends with a Diagnose check-up; a diagnosis can lead to new ideas.
 
-### 💡 Idear
+### 💡 Ideate
 
-- Duas a três ideias **bem desenvolvidas**, cada uma com: o que é, o objetivo, como fica no site, tecnologia e custo, esforço, primeiros passos, riscos e como medir.
-- Antes de propor melhorias, **vê o teu site** para não sugerir o que já existe.
-- Usa um [catálogo de inspiração](references/idear/inspiracao.md) por objetivo e por tipo de site, e diz-te francamente que ideias evitar (carrosséis, chats sem ninguém, blogs abandonados...).
+- Two or three **well-developed** ideas, each with: what it is, the goal, how it looks on the site, technology and cost, effort, first steps, risks and how to measure it.
+- Before suggesting improvements, it **looks at your site** so it doesn't suggest what's already there.
+- It uses an [inspiration catalog](references/idear/inspiracao.md) by goal and by type of site, and tells you frankly which ideas to avoid (carousels, chat widgets nobody answers, abandoned blogs...).
 
-### 🛠️ Criar
+### 🛠️ Create
 
 ```
-1. Briefing ─► 2. Plano ─► ✋ ─► 3. Identidade visual ─► 4. Página inicial ─► ✋ ─► 5. Resto do site ─► 6. Verificação ─► ✋ ─► 7. Lançamento
+1. Brief ─► 2. Plan ─► ✋ ─► 3. Visual identity ─► 4. Home page ─► ✋ ─► 5. Rest of the site ─► 6. Verification ─► ✋ ─► 7. Launch
 ```
 
-- **Briefing** com as perguntas certas para 11 tipos de site.
-- **Plano** com a tecnologia, o alojamento e os custos, mais a sua opinião. ✋ Aprovas.
-- **Identidade visual** própria, não um modelo genérico.
-- **Página inicial** primeiro, com capturas em telemóvel e computador. ✋ Aprovas.
-- **Resto do site**: páginas, 404, páginas legais e SEO.
-- **Verificação**: Lighthouse ≥ 90, acessibilidade, privacidade. ✋ Aprovas.
-- **Lançamento**: domínio, email, Search Console e um guia `COMO-EDITAR.md`.
-- **Guias:** [`briefing`](references/criar/briefing.md) · [`stack`](references/criar/stack.md) (tecnologia, alojamento, formulários, CMS, estatísticas sem cookies, custos) · [`design`](references/criar/design.md) · [`paginas`](references/criar/paginas.md) (conteúdo e páginas legais UE/Portugal) · [`qualidade`](references/criar/qualidade.md) · [`lancamento`](references/criar/lancamento.md).
-- **[Site-base](assets/starter/)** testado em telemóvel, computador e modo escuro. Tem HTML acessível, CSS com *design tokens*, SEO e partilha, cabeçalhos de segurança, zero rastreadores, 404, política de privacidade e cerca de 1 KB de JavaScript.
+- **Brief** with the right questions for 11 types of site.
+- **Plan** with the technology, hosting and costs, plus its opinion. ✋ You approve.
+- **A visual identity of its own**, not a generic template.
+- **Home page** first, with screenshots on mobile and desktop. ✋ You approve.
+- **Rest of the site**: pages, 404, legal pages and SEO.
+- **Verification**: Lighthouse ≥ 90, accessibility, privacy. ✋ You approve.
+- **Launch**: domain, email, Search Console and a `COMO-EDITAR.md` editing guide.
+- **Guides:** [`briefing`](references/criar/briefing.md) · [`stack`](references/criar/stack.md) (technology, hosting, forms, CMS, cookie-free analytics, costs) · [`design`](references/criar/design.md) · [`paginas`](references/criar/paginas.md) (content and EU/Portugal legal pages) · [`qualidade`](references/criar/qualidade.md) · [`lancamento`](references/criar/lancamento.md).
+- **[Starter site](assets/starter/)** tested on mobile, desktop and dark mode. It has accessible HTML, CSS with design tokens, SEO and social sharing, security headers, zero trackers, a 404 page, a privacy policy and about 1 KB of JavaScript.
 
-### 🩺 Diagnosticar
+### 🩺 Diagnose
 
-**Consulta → exame com provas → relatório de saúde (🔴🟠🟡🟢) → a minha opinião → decides → tratamento verificado → alta.**
+**Consultation → examination with evidence → health report (🔴🟠🟡🟢) → my opinion → you decide → verified treatment → discharge.**
 
-O exame cobre 12 áreas: funcionamento · layout e alinhamentos · imagens · desempenho (Core Web Vitals) · segurança (HTTPS, CSP, segredos expostos, XSS...) · privacidade e RGPD · acessibilidade (WCAG 2.2 AA) · SEO · conteúdo · compatibilidade · domínio, alojamento e email · qualidade do código.
+The examination covers 12 areas: functionality · layout and alignment · images · performance (Core Web Vitals) · security (HTTPS, CSP, exposed secrets, XSS...) · privacy and GDPR · accessibility (WCAG 2.2 AA) · SEO · content · compatibility · domain, hosting and email · code quality.
 
-Guias: [`checklist`](references/diagnostico/checklist.md) (150+ verificações) e [`como-verificar`](references/diagnostico/como-verificar.md) (comandos e ferramentas para cada uma).
+Guides: [`checklist`](references/diagnostico/checklist.md) (150+ checks) and [`como-verificar`](references/diagnostico/como-verificar.md) (commands and tools for each check).
 
-### Segurança e ética
+### Safety and ethics
 
-Só examina sites teus, e as verificações de segurança são sempre passivas: nunca ataca nem explora falhas. Nunca copia sites alheios e nunca inventa preços, testemunhos ou números. Também não cria contas nem faz compras por ti: diz-te exatamente o que fazer.
+It only examines your own sites, and security checks are always passive: it never attacks or exploits anything. It never copies other people's sites and never invents prices, testimonials or numbers. It also doesn't create accounts or make purchases for you: it tells you exactly what to do.
 
-### Exemplos
+### Examples (in Portuguese)
 
-- [Idear: ideias para uma oficina de bicicletas](examples/idear.md)
-- [Criar: briefing e plano de um estúdio de pilates](examples/criar.md)
-- [Diagnosticar: relatório de saúde de uma padaria](examples/diagnosticar.md)
+- [Ideate: ideas for a bicycle repair shop](examples/idear.md)
+- [Create: brief and plan for a pilates studio](examples/criar.md)
+- [Diagnose: health report for a bakery](examples/diagnosticar.md)
 
-### Instalação
+### Installation
 
 **Claude Code**
 
@@ -78,71 +76,39 @@ Só examina sites teus, e as verificações de segurança são sempre passivas: 
 git clone https://github.com/mozuraa/claude-skill-website-studio.git ~/.claude/skills/website-studio
 ```
 
-**Ou com toda a biblioteca, como plugin:**
+Or tell Claude in a new chat: *"install the skill from this link: https://github.com/mozuraa/claude-skill-website-studio"*.
+
+**Or with the whole library, as a plugin:**
 
 ```
 /plugin marketplace add mozuraa/claude-skills
 /plugin install estudios@mozuraa-skills
 ```
 
-**App Claude / claude.ai:** carrega em **Code → Download ZIP** e carrega o ZIP nas **Definições**, na secção **Skills** (em *Capacidades*).
+**Claude app / claude.ai:** click **Code → Download ZIP** and upload the ZIP under **Settings → Capabilities → Skills**.
 
-Abre uma sessão nova para a skill ser carregada. Para atualizar: `cd ~/.claude/skills/website-studio && git pull`.
+Start a new session so the skill loads. To update: `cd ~/.claude/skills/website-studio && git pull`.
 
-### Estrutura
+### Structure
 
 ```
 claude-skill-website-studio/
-├── SKILL.md                     # os 3 modos e as regras comuns
+├── SKILL.md                     # the 3 modes and shared rules
 ├── references/
-│   ├── idear/inspiracao.md      # ideias por objetivo e por tipo de site
+│   ├── idear/inspiracao.md      # ideas by goal and by type of site
 │   ├── criar/                   # briefing, stack, design, paginas, qualidade, lancamento
-│   └── diagnostico/             # checklist (12 áreas) e como-verificar (comandos)
-├── assets/starter/              # site-base pronto a adaptar
+│   └── diagnostico/             # checklist (12 areas) and como-verificar (commands)
+├── assets/starter/              # starter site ready to adapt
 ├── examples/                    # idear.md, criar.md, diagnosticar.md
-├── icon.svg · README.md · CHANGELOG.md · LICENSE
+├── icon.svg · README.md · README.pt.md · CHANGELOG.md · LICENSE
 ```
 
-### História
-
-A versão 2.0 junta duas skills anteriores, **website-builder** e **website-doctor**, cujos históricos de git estão preservados neste repositório, e acrescenta o modo Idear.
-
-### Licença
-
-[MIT](LICENSE). Os modelos de páginas legais são pontos de partida e não substituem aconselhamento jurídico.
-
----
-
-## English
-
-A **complete website studio** for **Claude**, with three linked modes:
-
-| Mode | What for | Example prompt |
-|---|---|---|
-| 💡 **Idear** (Ideate) | Detailed ideas for a **new site** or to **improve your site** (more leads, sales, Google traffic) | "My site barely brings in customers, any ideas?" |
-| 🛠️ **Criar** (Create) | **Builds a complete website from scratch with you**, from briefing to launch, with a ready starter site | "I want a website for my restaurant" |
-| 🩺 **Diagnosticar** (Diagnose) | **Examines and fixes** everything that affects a site: 12 areas, 150+ checks, a health report with its opinion | "Is my site secure? It's slow on mobile" |
-
-In every mode Claude **asks questions, shows evidence, gives its honest opinion and only proceeds with your approval**. An approved idea flows into Create; Create ends with a Diagnose checkup; a diagnosis can lead to new ideas.
-
-- **Ideate:** 2–3 well-developed ideas, each with its goal, where it fits on the site, cost, effort, first steps, risks and how to measure it. It looks at your site first, and draws on an inspiration catalog.
-- **Create:** 7 phases with 3 approvals. Guides for briefing (11 site types), technology and costs, design, page content and EU/Portugal legal pages, quality and launch, plus a tested starter site (accessible, fast, secure, no trackers).
-- **Diagnose:** consultation → evidence-based exam → health report (🔴🟠🟡🟢) → opinion → you decide → verified fixes → discharge. It covers functionality, layout, images, performance, security, privacy/GDPR, accessibility, SEO, content, compatibility, domain/email and code.
-
-The guides are in Portuguese, but Claude replies in the language you write in. Security checks are passive and only on your own sites.
-
-### Installation
-
-```bash
-git clone https://github.com/mozuraa/claude-skill-website-studio.git ~/.claude/skills/website-studio
-```
-
-Or with the whole library as a plugin: `/plugin marketplace add mozuraa/claude-skills` then `/plugin install estudios@mozuraa-skills`. For the Claude app / claude.ai, use **Code → Download ZIP** and upload it under **Settings → Skills**.
+The skill's instructions are written in Portuguese, but Claude replies in whatever language you write in.
 
 ### History
 
-Version 2.0 merges two earlier skills, **website-builder** and **website-doctor** (both git histories are preserved here), and adds the Ideate mode.
+Version 2.0 merges two earlier skills, **website-builder** and **website-doctor** (their git histories are preserved in this repository), and adds the Ideate mode.
 
 ### License
 
-[MIT](LICENSE). The legal page templates are starting points, not legal advice.
+[MIT](LICENSE). The legal page templates are starting points and are not a substitute for legal advice.
